@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Irisnel</title>
+    <title>Portafolio Académico</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -134,33 +134,17 @@
         }
         
         .about-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-image {
-            flex: 1;
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
         }
         
-        .profile-img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--secondary-color);
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
         }
         
         /* PROYECTOS */
-        #proyectos {
-            background: var(--light-bg);
-        }
-        
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -204,10 +188,17 @@
         
         .project-links a {
             display: inline-block;
-            margin-right: 10px;
-            color: var(--secondary-color);
-            font-weight: bold;
+            background: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
             text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .project-links a:hover {
+            background: #15a589;
         }
         
         /* CONTACTO */
@@ -241,10 +232,6 @@
         
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .about-content {
-                flex-direction: column;
-            }
-            
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -260,10 +247,13 @@
     <!-- MENÚ -->
     <nav>
         <div class="nav-container">
-            <div class="logo">Irisnel</div>
+            <div class="logo">Portafolio Acádemico</div>
             <div>
                 <a href="#sobre-mi">Sobre mí</a>
-                <a href="#proyectos">Proyectos</a>
+                <a href="#talleres">Talleres</a>
+                <a href="#laboratorios">Laboratorios</a>
+                <a href="#parciales">Parciales</a>
+                <a href="#examen">Examen</a>
                 <a href="#contacto">Contacto</a>
             </div>
         </div>
@@ -271,9 +261,9 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <h1>Portafolio de Irisnel</h1>
-        <p>Estudiante de programación en la UTP. Bienvenido a mi portafolio con todos los trabajos del curso.</p>
-        <a href="#proyectos" class="btn">Ver Proyectos</a>
+        <h1>Portafolio Académico de Irvin Martínez</h1>
+        <p>Estudiante de programación en la UTP. Bienvenido, este portafolio contiene los trabajos realizados a lo largo del curso de Programación I.</p>
+        <a href="#sobre-mi" class="btn">Empezar</a>
     </section>
 
     <!-- SECCIÓN SOBRE MÍ -->
@@ -282,15 +272,80 @@
             <h2>Sobre mí</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hola, soy Irisnel, estudiante de programación en la UTP con gran interés en el desarrollo web y de software.</p>
-                    <p>En este portafolio encontrarás los proyectos que he desarrollado durante mi formación académica, aplicando diferentes conceptos de programación como condicionales, bucles, arreglos y más.</p>
+                    <!-- EDITAR: Información personal -->
+                    <p>Hola, soy Irvin, estudiante de programación en la UTP con gran interés en el desarrollo web y de software.</p>
+                    <p>En este portafolio encontrarás los trabajos que he desarrollado durante este curso, aplicando diferentes conceptos de programación como condicionales, bucles, conexión a base de datos MySQL y más.</p>
                     <p>Mi objetivo es seguir aprendiendo y mejorando mis habilidades para convertirme en un desarrollador profesional.</p>
                 </div>
-                <div class="about-image">
-                    <div class="profile-img">
-                        <!-- Aquí puedes agregar tu imagen -->
-                        <div style="width:100%;height:100%;background:#eee;display:flex;align-items:center;justify-content:center;color:#777;">
-                            Tu foto
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TALLERES -->
+    <section id="talleres">
+        <div class="section-container">
+            <h2>Talleres</h2>
+            <div class="projects-grid">
+                <!-- Taller 1 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        Taller 1
+                    </div>
+                    <div class="project-content">
+                        <!-- EDITAR: Título y descripción del taller -->
+                        <h3>Taller 1 </h3>
+                        <p>Primer taller enfocado en la creación de una interfaz con Java Frame y la instalación y conexión remota de una máquina virtual.</p>
+                        <div class="project-links">
+                            <!-- EDITAR: Enlace al taller -->
+                            <a href="ENLACE_ONEDRIVE_O_PDF_AQUI" target="_blank">Revisar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Taller 2 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        Taller 2
+                    </div>
+                    <div class="project-content">
+                        <!-- EDITAR: Título y descripción del taller -->
+                        <h3>Taller 3 - Bucles</h3>
+                        <p>Tercer taller enfocado en la creación de una interfaz y conexión a base de datos MySQL.</p>
+                        <div class="project-links">
+                            <!-- EDITAR: Enlace al taller -->
+                            <a href="ENLACE_ONEDRIVE_O_PDF_AQUI" target="_blank">Revisar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Taller 3 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        Taller 3
+                    </div>
+                    <div class="project-content">
+                        <!-- EDITAR: Título y descripción del taller -->
+                        <h3>Investigación 1</h3>
+                        <p>Primer investigación enfocada en el desarrollo de preguntas relacionadas a la construcción de una clase en JAVA.</p>
+                        <div class="project-links">
+                            <!-- EDITAR: Enlace al taller -->
+                            <a href="ENLACE_ONEDRIVE_O_PDF_AQUI" target="_blank">Revisar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Taller 4 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        Taller 4
+                    </div>
+                    <div class="project-content">
+                        <!-- EDITAR: Título y descripción del taller -->
+                        <h3>Investigación 2</h3>
+                        <p>Investigación enfocada en el análisis FODA de los IDE NetBeans y Eclipse.</p>
+                        <div class="project-links">
+                            <!-- EDITAR: Enlace al taller -->
+                            <a href="ENLACE_ONEDRIVE_O_PDF_AQUI" target="_blank">Revisar</a>
                         </div>
                     </div>
                 </div>
@@ -298,57 +353,122 @@
         </div>
     </section>
 
-    <!-- SECCIÓN PROYECTOS -->
-    <section id="proyectos">
+    <!-- SECCIÓN LABORATORIOS -->
+    <section id="laboratorios">
         <div class="section-container">
-            <h2>Mis Proyectos</h2>
+            <h2>Laboratorios</h2>
             <div class="projects-grid">
-                <!-- Proyecto 1 -->
+                <!-- Laboratorio 1 -->
                 <div class="project-card">
                     <div class="project-img">
-                        Proyecto 1
+                        Laboratorio 1
                     </div>
                     <div class="project-content">
-                        <h3>Proyecto 1 – Condicionales</h3>
-                        <p>Aplicación de conceptos de condicionales en JavaScript para resolver problemas específicos.</p>
+                        <!-- EDITAR: Título y descripción del laboratorio -->
+                        <h3>Laboratorio 1 - Fundamentos</h3>
+                        <p>Primer laboratorio práctico aplicando conceptos fundamentales de programación.</p>
                         <div class="project-links">
-                            <a href="proyecto1/">Ver código</a>
-                            <a href="#">Ver demo</a>
+                            <!-- EDITAR: Enlace al laboratorio -->
+                            <a href="ENLACE_ONEDRIVE_O_PDF_AQUI" target="_blank">Revisar</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Proyecto 2 -->
+                <!-- Laboratorio 2 -->
                 <div class="project-card">
                     <div class="project-img">
-                        Proyecto 2
+                        Laboratorio 2
                     </div>
                     <div class="project-content">
-                        <h3>Proyecto 2 – Bucles</h3>
-                        <p>Implementación de diferentes tipos de bucles para optimizar procesos repetitivos.</p>
+                        <!-- EDITAR: Título y descripción del laboratorio -->
+                        <h3>Laboratorio 2 - Avanzado</h3>
+                        <p>Segundo laboratorio con ejercicios más complejos y aplicaciones prácticas.</p>
                         <div class="project-links">
-                            <a href="proyecto2/">Ver código</a>
-                            <a href="#">Ver demo</a>
+                            <!-- EDITAR: Enlace al laboratorio -->
+                            <a href="ENLACE_ONEDRIVE_O_PDF_AQUI" target="_blank">Revisar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PARCIALES -->
+    <section id="parciales">
+        <div class="section-container">
+            <h2>Parciales</h2>
+            <div class="projects-grid">
+                <!-- Parcial 1 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        Parcial 1
+                    </div>
+                    <div class="project-content">
+                        <!-- EDITAR: Título y descripción del parcial -->
+                        <h3>Parcial 1 - Primer Corte</h3>
+                        <p>Primer examen parcial que evalúa los conceptos iniciales del curso.</p>
+                        <div class="project-links">
+                            <!-- EDITAR: Enlace al parcial -->
+                            <a href="ENLACE_ONEDRIVE_O_PDF_AQUI" target="_blank">Revisar</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Proyecto 3 -->
+                <!-- Parcial 2 -->
                 <div class="project-card">
                     <div class="project-img">
-                        Proyecto 3
+                        Parcial 2
                     </div>
                     <div class="project-content">
-                        <h3>Proyecto 3 – Arreglos</h3>
-                        <p>Manejo y manipulación de arreglos para organizar y procesar datos de manera eficiente.</p>
+                        <!-- EDITAR: Título y descripción del parcial -->
+                        <h3>Parcial 2 - Segundo Corte</h3>
+                        <p>Segundo examen parcial que evalúa conceptos intermedios del curso.</p>
                         <div class="project-links">
-                            <a href="proyecto3/">Ver código</a>
-                            <a href="#">Ver demo</a>
+                            <!-- EDITAR: Enlace al parcial -->
+                            <a href="ENLACE_ONEDRIVE_O_PDF_AQUI" target="_blank">Revisar</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Puedes agregar más proyectos aquí -->
+                <!-- Parcial 3 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        Parcial 3
+                    </div>
+                    <div class="project-content">
+                        <!-- EDITAR: Título y descripción del parcial -->
+                        <h3>Parcial 3 - Tercer Corte</h3>
+                        <p>Tercer examen parcial que evalúa conceptos avanzados del curso.</p>
+                        <div class="project-links">
+                            <!-- EDITAR: Enlace al parcial -->
+                            <a href="ENLACE_ONEDRIVE_O_PDF_AQUI" target="_blank">Revisar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EXAMEN -->
+    <section id="examen">
+        <div class="section-container">
+            <h2>Examen Final</h2>
+            <div class="projects-grid">
+                <!-- Examen -->
+                <div class="project-card">
+                    <div class="project-img">
+                        Examen Final
+                    </div>
+                    <div class="project-content">
+                        <!-- EDITAR: Título y descripción del examen -->
+                        <h3>Examen Final</h3>
+                        <p>Examen final que evalúa todos los conceptos aprendidos durante el curso.</p>
+                        <div class="project-links">
+                            <!-- EDITAR: Enlace al examen -->
+                            <a href="ENLACE_ONEDRIVE_O_PDF_AQUI" target="_blank">Revisar</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -358,7 +478,8 @@
         <div class="section-container">
             <h2>Contacto</h2>
             <div class="contact-info">
-                <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto?</p>
+                <p>¿Tienes alguna pregunta o quieres más información sobre mis trabajos?</p>
+                <!-- EDITAR: Información de contacto -->
                 <p>Correo: <a href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a></p>
                 <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/tuusuario</a></p>
             </div>
@@ -367,7 +488,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2023 Portafolio de Irisnel. Todos los derechos reservados.</p>
+        <p>&copy; 2023 Portafolio Académico de Irisnel. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
